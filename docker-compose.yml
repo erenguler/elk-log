@@ -12,7 +12,7 @@ services:
       - elk-network
 
   kibana:
-    image: docker.elastic.co/kibana/kibana:7.17.0
+    build: .  # Dockerfile'ı kullanarak Kibana container'ını oluştur
     container_name: kibana
     ports:
       - "5601:5601"
